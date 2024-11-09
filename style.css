@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,9 +14,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header styles */
 header {
     text-align: center;
-    background-color:#7cc2bc;
+    background-color: #7cc2bc;
     color: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -29,6 +31,7 @@ header p {
     margin: 5px 0;
 }
 
+/* Section and project styles */
 h2 {
     color: #333;
     border-bottom: 2px solid #333;
@@ -36,31 +39,73 @@ h2 {
     margin-top: 30px;
 }
 
-ul {
-    list-style-type: square;
-}
-
 .project {
     margin-bottom: 20px;
 }
 
-
-a{
-    color:blue;
+a {
+    color: blue;
 }
 
 .skills-section {
     display: flex;
-    justify-content: space-between; /* Adds space between columns */
-
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
 }
+
 .skills-column {
     width: 45%; /* Adjust the width of the columns */
+    margin-bottom: 20px;
 }
+
+/* Add space and styles for lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
 h3 {
     margin-bottom: 10px;
 }
-ul {
-    list-style-type: disc;
-    padding-left: 20px; /* Aligns list items properly */
+
+/* Responsive styles using media queries */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .skills-section {
+        display: block; /* Stack the skill columns vertically on smaller screens */
+    }
+
+    .skills-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .skills-column {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, ul {
+        font-size: 14px;
+    }
 }
